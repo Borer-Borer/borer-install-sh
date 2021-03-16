@@ -26,6 +26,6 @@ if [ -d $HOME/softwares/dicts ]; then
     sudo mv $PWD/temp/stardict-* $HOME/softwares/dicts/
 else
     sudo mkdir $HOME/softwares/dicts
-    sudo chmod 744 ./dict_temp
+    sudo chmod 744 $PWD/temp/
     sudo mv $PWD/temp/stardict-* $HOME/softwares/dicts/
 fi
