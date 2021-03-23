@@ -338,7 +338,11 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
 
+" " for asyncomplete.vim log
+" let g:asyncomplete_log_file = expand('~/asyncomplete.log')
 
 
 
@@ -349,8 +353,11 @@ inoremap [ []<LEFT>
 inoremap { {}<LEFT>
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
-nnoremap <leader>w <Esc>:w<cr>
-inoremap <leader>w <Esc>:w<cr>a
+" save file
+nnoremap <leader>w :wa<CR>
+" Save a file as root (,W)
+noremap <leader>W :wa sudo://%<CR>
+inoremap <leader>w <Esc>:wa<cr>a
 " inoremap jj <Esc>`^
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
