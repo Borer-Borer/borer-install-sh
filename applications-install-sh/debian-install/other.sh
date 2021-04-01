@@ -12,3 +12,4 @@ $install_command fcitx-im fcitx-configtool fcitx-googlepinyin
 $install_command smplayer
 $install_command mysql-workbench-community
 $install_command ripgrep
+$install_command gdebi
