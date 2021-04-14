@@ -18,6 +18,8 @@ install_oh_my_zsh(){
     ln -s $PWD/applications-install-sh/configs/.zshrc $HOME/.zshrc
     cd $HOME/.oh-my-zsh/plugins
     git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_PATH/plugins/zsh-autosuggestions
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_PATH/themes/spaceship-prompt" --depth=1
+    ln -s "$ZSH_PATH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_PATH/themes/spaceship.zsh-theme" 
     cd $PWD
 }
 
