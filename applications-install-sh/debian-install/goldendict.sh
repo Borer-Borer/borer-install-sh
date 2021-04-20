@@ -29,3 +29,5 @@ else
     sudo chmod 744 $PWD/temp/
     sudo mv $PWD/temp/stardict-* $HOME/softwares/dicts/
 fi
+# http://dict.youdao.com/w/eng/%GDWORD%/#keyfrom=dict2.index
+# https://cn.bing.com/dict/search?q=%GDWORD%
