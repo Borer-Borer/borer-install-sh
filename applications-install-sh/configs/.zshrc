@@ -106,13 +106,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # 交换ctrl和caps
-# /usr/bin/setxkbmap -option "ctrl:swapcaps"
+#/usr/bin/setxkbmap -option "ctrl:swapcaps"
 # 还原所有键设置
 # /usr/bin/setxkbmap -option ""
 alias tnew="tmux new -s"
+alias tto="tmux attach -t"
 alias vi="nvim"
 alias ls="lsd"
 alias trans="trans :zh"
-alias mytest="cd test-something"
+alias mytest="cd $HOME/test-something"
+alias myrustlings="cd $HOME/rustlines"
 export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(navi widget zsh)"
