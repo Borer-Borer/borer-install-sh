@@ -13,3 +13,6 @@ case $release_like_name in
     *)
         ;;
 esac
+
+# sudo ntpdate 0.asia.pool.ntp.org
+# sudo hwclock --systohc
