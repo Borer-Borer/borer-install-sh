@@ -1,54 +1,34 @@
 #/bin/bash
 
-# install_source_code_pro_font(){
-    # wget  https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip -O $PWD/temp/sourcecodepro.zip
-    # unzip $PWD/temp/sourcecodepro.zip -d $PWD/temp/sourcecodepro
-    # if [ -d $HOME/.fonts ]
-    # then
-        # mv -f $PWD/temp/sourcecodepro/ $HOME/.fonts/
-    # else
-        # mkdir $HOME/.fonts
-        # mv -f sourcecodepro/ $HOME/.fonts/
-    # fi
-    # fc-cache -fv
-# }
+[[ ! $(command -v vim) ]] && $install_command vim || echo "vim exist!"
+[[ ! $(command -v fzf) ]] && $install_command fzf || echo "fzf exist!"
+[[ ! $(command -v ctags) ]] && $install_command ctags || echo "ctags exist!"
+[[ ! $(command -v tmux) ]] && $install_command tmux || echo "tmux exist!"
+[[ ! $(command -v rofi) ]] && $install_command rofi || echo "rofi exist!"
+[[ ! $(command -v cmus) ]] && $install_command cmus || echo "cmus exist!"
+[[ ! $(command -v ripgrep) ]] && $install_command ripgrep || echo "ripgrep exist!"
 
-# install_oh_my_zsh(){
+install_oh_my_zsh(){
+    [[ ! $(command -v zsh) ]] && $install_command zsh || echo "zsh exist!"
     # sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    # ln -s $PWD/applications-install-sh/configs/.zshrc $HOME/.zshrc
-    # cd $HOME/.oh-my-zsh/plugins
-    # git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_PATH/plugins/zsh-autosuggestions
-    # git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_PATH/themes/spaceship-prompt" --depth=1
-    # ln -s "$ZSH_PATH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_PATH/themes/spaceship.zsh-theme" 
-    # cd $PWD
-# }
+    chsh -s $(which zsh) $USER
+    ZSH_PATH=$HOME/.oh-my-zsh
+    ln -s $PWD/applications-install-sh/configs/.zshrc $HOME/.zshrc
+    cd $HOME/.oh-my-zsh/plugins
+    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_PATH/plugins/zsh-autosuggestions
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_PATH/themes/spaceship-prompt" --depth=1
+    ln -s "$ZSH_PATH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_PATH/themes/spaceship.zsh-theme" 
+    cd $PWD
+}
 
 # install_keynav(){
     # $kali_install keynav
     # ln -s $PWD/applications-install-sh/configs/.keynavrc $HOME/.keynavrc
 # }
 
-# install_unclutter(){
-    # $kali_install unclutter
-    # sudo echo "ps -ef | grep clutter | grep -v grep >> /dev/null 2>&1 \
-    # if [ $? -ne 0 ]; then \
-    # unclutter -idle 10 \
-    # fi" >> /etc/profile
-# }
-
-# $install_command vim
-# $install_command tmux
-# $install_command fzf
-# $install_command universal-ctags
-# $install_command rofi
-# $install_command cmus
-# $install_command htop
-
-# install_source_code_pro_font
-# install_oh_my_zsh
+install_oh_my_zsh
 # install_keynav
-# install_unclutter
 
-# ln -s $PWD/applications-install-sh/configs/.vimrc $HOME/.vimrc
-# ln -s $PWD/applications-install-sh/configs/.tmux $HOME/.tmux
-# curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s $PWD/applications-install-sh/configs/.vimrc $HOME/.vimrc
+ln -s $PWD/applications-install-sh/configs/.tmux $HOME/.tmux
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

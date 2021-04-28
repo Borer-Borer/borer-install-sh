@@ -10,5 +10,14 @@
 # [[ ! $(command -v typora) ]] && $install_command typora || echo "typora exist!"
 [[ ! $(command -v smplayer) ]] && $install_command smplayer || echo "smplayer exist!"
 [[ ! $(command -v mysql-workbench) ]] && $install_command mysql-workbench || echo "mysql-workbench exist!"
-[[ ! $(command -v ripgrep) ]] && $install_command ripgrep || echo "ripgrep exist!"
 # [[ ! $(command -v gdebi) ]] && $install_command gdebi || echo "gdebi exist!"
+[[ ! $(command -v htop) ]] && $install_command htop || echo "htop exist!"
+
+install_unclutter(){
+    [[ ! $(command -v unclutter) ]] && $install_command unclutter || echo "unclutter exist."
+    # sudo chmod 777 /etc/profile
+    # sudo echo "ps -ef | grep clutter | grep -v grep >> /dev/null 2>&1 \n
+    # if [ $? -ne 0 ]; then \n
+    # unclutter -idle 10 \n
+    # fi" >> /etc/profile
+}
