@@ -6,13 +6,14 @@
 [[ ! $(command -v tmux) ]] && $install_command tmux || echo "tmux exist!"
 [[ ! $(command -v rofi) ]] && $install_command rofi || echo "rofi exist!"
 [[ ! $(command -v cmus) ]] && $install_command cmus || echo "cmus exist!"
-[[ ! $(command -v ripgrep) ]] && $install_command ripgrep || echo "ripgrep exist!"
+# [[ ! $(command -v ripgrep) ]] && $install_command ripgrep || echo "ripgrep exist!"
 
 install_oh_my_zsh(){
-    [[ ! $(command -v zsh) ]] && $install_command zsh || echo "zsh exist!"
+    # [[ ! $(command -v zsh) ]] && $install_command zsh || echo "zsh exist!"
     # sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     chsh -s $(which zsh) $USER
     ZSH_PATH=$HOME/.oh-my-zsh
+    rm $HOME/.zshrc
     ln -s $PWD/applications-install-sh/configs/.zshrc $HOME/.zshrc
     cd $HOME/.oh-my-zsh/plugins
     git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_PATH/plugins/zsh-autosuggestions
@@ -29,6 +30,8 @@ install_oh_my_zsh(){
 install_oh_my_zsh
 # install_keynav
 
+rm $HOME/.vimrc
+rm $HOME/.tmux
 ln -s $PWD/applications-install-sh/configs/.vimrc $HOME/.vimrc
 ln -s $PWD/applications-install-sh/configs/.tmux $HOME/.tmux
-curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
