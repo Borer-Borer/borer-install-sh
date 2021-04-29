@@ -6,3 +6,7 @@ if [ ! $(command -v cargo) ]; then
 else
     echo "rust exist!"
 fi
+
+cargo install navi
+navi repo add denisidoro/cheats
+cargo install spotify-tui
