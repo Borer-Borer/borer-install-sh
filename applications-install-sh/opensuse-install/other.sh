@@ -12,7 +12,7 @@
 [[ ! $(command -v mysql-workbench) ]] && $install_command mysql-workbench || echo "mysql-workbench exist!"
 # [[ ! $(command -v gdebi) ]] && $install_command gdebi || echo "gdebi exist!"
 [[ ! $(command -v htop) ]] && $install_command htop || echo "htop exist!"
-
+$install_command fira-code-fonts
 install_unclutter(){
     [[ ! $(command -v unclutter) ]] && $install_command unclutter || echo "unclutter exist."
     # sudo chmod 777 /etc/profile
