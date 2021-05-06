@@ -9,13 +9,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="ys"
+ZSH_THEME="ys"
 # ZSH_THEME="cloud"
 # ZSH_THEME="fino-time"
 # ZSH_THEME="half-life"
 # ZSH_THEME="jonathan"
 # ZSH_THEME="amuse"
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 alias tnew="tmux new -s"
 alias tto="tmux attach -t"
 alias vi="nvim"
+alias vim="gvim -v"
 alias ls="lsd"
 alias trans="trans :zh"
 alias mytest="cd $HOME/test-something"
