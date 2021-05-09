@@ -9,13 +9,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="ys"
+#ZSH_THEME="ys"
 # ZSH_THEME="cloud"
 # ZSH_THEME="fino-time"
 # ZSH_THEME="half-life"
 # ZSH_THEME="jonathan"
 # ZSH_THEME="amuse"
-# ZSH_THEME="spaceship"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,4 +118,7 @@ alias trans="trans :zh"
 alias mytest="cd $HOME/test-something"
 alias myrustlings="cd $HOME/rustlings"
 export PATH="$HOME/.cargo/bin:$PATH"
+alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+#alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+alias unproxy='unset all_proxy'
 eval "$(navi widget zsh)"
