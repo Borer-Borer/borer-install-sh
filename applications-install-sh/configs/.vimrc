@@ -36,12 +36,16 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+" Plug 'junegunn/limelight.vim'
 "主题
 Plug 'w0ng/vim-hybrid'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
-
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 "------设置leader键-----------
 let mapleader=','
 
@@ -173,6 +177,27 @@ set nofoldenable "启动vim时关闭折叠
 
 
 "---------插件配置-----------------
+"插件:limelight
+" nmap <Leader>l <Plug>(Limelight)
+" xmap <Leader>l <Plug>(Limelight)
+" Color name (:help cterm-colors) or ANSI code
+" let g:limelight_conceal_ctermfg = 'gray'
+" let g:limelight_conceal_ctermfg = 240
+" Color name (:help gui-colors) or RGB color
+" let g:limelight_conceal_guifg = 'DarkGray'
+" let g:limelight_conceal_guifg = '#777777'
+" Default: 0.5
+" let g:limelight_default_coefficient = 0.7
+" Number of preceding/following paragraphs to include (default: 0)
+" let g:limelight_paragraph_span = 0
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+" let g:limelight_bop = '^\s'
+" let g:limelight_eop = '\ze\n^\s'
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+" let g:limelight_priority = -1
 "插件:'vim-airline/vim-airline'和'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 "选择airline显示的主题
@@ -266,6 +291,12 @@ nnoremap <Leader>q :Bdelete<CR>
 "插件 fzf.vim
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
+"插件 vim-makrdown
+" let g:vim_markdown_folding_disable=1
+" let g:vim_markdown_no_default_key_mappings = 1
+" let g:vim_markdown_toc_autofit = 1
+" set conceallevel=2
+" let g:vim_markdown_conceal = 0
 " 插件 apzelos / blamer.nvim  用于直接显示代码某行是谁写的
 " 启用该插件
 " let g:blamer_enabled = 1
