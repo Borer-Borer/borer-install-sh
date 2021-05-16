@@ -1,0 +1,165 @@
+#/bin/bash
+##install archlinux from USB-Live
+##UEFI model install
+#note that something in square brackets is option
+
+
+####install archlinux system####
+
+#check your boot model is UEFI or BIOS
+#if have some fiels 
+ls /sys/firmware/efi/efivars
+#connect wifi
+iwctl
+#show your divice
+device list
+#scan wifi around
+station <devicename> scan
+#show the result that scan
+station <devicename> get-networks
+#connect wifi
+station <devicename> connect <wifi-ssid>
+#update your systemtime
+timedatectl set-ntp true
+tinedatectl status
+#disk partition
+#search
+#note that the root partition is necessary
+fdisk -l
+fdisk /dev/<your partition>
+#disk formatting
+#root home is ext4 or other
+mkfs.ext4 /dev/<your root/home partition>
+#UEFI--EFI
+mkfs.fat -F32 /dev/<your efi partition>
+#swap partition
+#fomatting
+mkswap /dev/<your swap partition>
+#on
+swapon /dev/<your swap partition>
+#mount partition
+mount /dev/<your root partition> /mnt
+mkdir /mnt/efi
+mount /dev/<your efi partition> /mnt/efi
+mkdir /mnt/home
+mount /dev/<your home partition> /mnt/home
+#install linux and other necessary applications
+pacstrap /mnt base linux linux-firmware base-devel
+
+
+####config system####
+#create fstab file
+genfstab -U /mnt >> /mnt/etc/fstab
+#check fstab
+cat /mnt/etc/fstab
+#into installed archsystem
+arch-chroot /mnt
+#install vim
+pacman -S vim
+#set zone
+ls /usr/share/zoneinfo
+ln -sf /usr/share/zoneinfo/<your Region>/<your City> /etc/localtime
+#create /etc/adjtime
+hwclock --systohc --utc
+#locale setting
+#uncomment:en_US UTF-8,zh_CN UTF-8
+vim /etc/locale.gen
+#create locale
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+export LANG=en_US.UTF-8
+#network setting
+echo myarch > /etc/hostname
+# 127.0.0.1 localhost
+# ::1 localhost
+# 127.0.1.1 myarch
+vim /etc/hosts
+#set root passwd
+passwd root
+#####the two grub#######
+pacman -S grub efibootmgr dosfstools openssh os-prober mtools linux-headers linux-lts linux-lts-headers
+grub-install --target=x86_64-efi --bootloader-id=<your boot name> --recheck
+#set locale for grub
+#cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
+#######################
+#####the two grub#######
+#grub
+# pacman -S grub efibootmgr
+# grub-install [--target=x86_64-efi] --efi-directory=/efi [--bootloader-id=<your boot name>]
+#create grub config file
+# grub-mkconfig -o /boot/grub/grub.cfg
+########################
+#install network management tool : iwd
+pacman -S iwd
+#reboot
+#exit or Ctrl+d
+exit
+umount -R /mnt
+reboot
+#when you come into your archlinux
+#avoid losing your network connection,you should
+#edit /etc/iwd/main.conf
+#[General]
+#EnableNetworkConfiguration=true
+#or install dhcpcd
+#pacman -S dhcpcd
+#systemctl start dhcpcd
+#systemctl enable dhcpcd
+vim /etc/iwd/main.conf
+systemctl start iwd.service
+systemctl enable iwd.service
+systemctl start systemd-resolved.service
+systemctl enable systemd-resolved.service
+#then you can connect your network
+#install display service
+pacman -S xorg
+#install GPU driver that your computer supported
+#intel
+#pacman -S xf86-video-intel
+#NVIDIA
+#pacman -S xf86-video-nouveau
+########install xfce4 desktop env###########
+pacman -S xfce4 xfce4-goodies
+#install display management tools
+pacman -S lightdm lightdm-gtk-greeter
+#[Seat:*]
+#...
+#greeter-session=lightdm-gtk-greeter
+#...
+vim /etc/lightdm/lightdm.conf
+systemctl enable lightdm.service
+############################################
+
+########install gnome desktop env###########
+#pacman -S xorg
+#pacman -S gnome
+#pacman start gdm.service
+#pacman enable gdm.service
+#systemctl enable NetworkManager.service
+############################################
+#add user
+#group:wheel,storage,power
+useradd -m -G "extra group" -s "login shell" "username"
+#give user sudo permission
+pacman -S sudo
+#add "yourname ALL=(ALL) ALL" under the line "root ALL=(ALL) ALL"
+vim /etc/sudoers
+#install fonts
+#english font
+pacman -S ttf-dejavu
+#chinese fonts
+pacman -S wqy-microhei
+#Xarchiver is a front-end to various command line archiving tools for Linux and BSD operating systems, designed to be independent of the desktop environment.  It is the default archiving application of Xfce and LXDE.It handles encrypted *.7z, *.arj, *.lrz, *.rar and *.zip archives
+sudo pacman -S xarchiver
+#mount filetype ntfs
+sudo pacman -S ntfs-3g
+#voice
+#sudo pacman -S alsa-utils alsa-plugins alsa-lib
+#alsamixer
+sudo pacman -S pulseaudio
+#you can install .deb
+#dpkg -i *****.dev
+sudo pacman -S dpkg
+#some base-devel
+sudo pacman -S base-devel
