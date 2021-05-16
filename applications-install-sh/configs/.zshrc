@@ -114,10 +114,11 @@ alias tto="tmux attach -t"
 alias vi="nvim"
 alias vim="gvim -v"
 alias ls="lsd"
+alias yay="trizen"
 alias trans="trans :zh"
 alias mytest="cd $HOME/test-something"
 alias myrustlings="cd $HOME/rustlings"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/bin:$PATH"
 alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 #alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset all_proxy'
