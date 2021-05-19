@@ -106,9 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # 交换ctrl和caps
-#/usr/bin/setxkbmap -option "ctrl:swapcaps"
+# /usr/bin/setxkbmap -option "ctrl:swapcaps"
 # 还原所有键设置
-# /usr/bin/setxkbmap -option ""
+/usr/bin/setxkbmap -option ""
 alias tnew="tmux new -s"
 alias tto="tmux attach -t"
 alias vi="nvim"
@@ -123,3 +123,4 @@ alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 #alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset all_proxy'
 eval "$(navi widget zsh)"
+cowsay -f tux $(whatis $(ls /usr/share/man/man1 |  shuf -n 1 | cut -d. -f1) 2>/dev/null | shuf -n 1)
