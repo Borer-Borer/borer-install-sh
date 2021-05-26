@@ -21,3 +21,8 @@
 [[ ! $(command -v wget) ]] && $install_command wget || echo "wget exist!"
 # Sony 的 PlayStation2, SEGA 的 DreamCast, Nintendo 的 N64，Namco 的街机
 # 原来 UNIX 用户早就有非常方便的 troff, LaTeX, SGML 等东西可以处理文档
+
+[[ ! -d "$HOME/bin" ]] && mkdir $HOME/bin
+# install trans
+wget -O $HOME/bin/trans git.io/trans
+sudo chmod +x $HOME/bin/trans
