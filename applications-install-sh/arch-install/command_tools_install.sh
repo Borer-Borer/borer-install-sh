@@ -1,6 +1,6 @@
 #/bin/bash
 #GNOME Keyring is a collection of components in GNOME that store secrets, passwords, keys, certificates and make them available to applications.
-[[ ! $(command -v gnome-keyring) ]] && $install_command || echo "gnome-keyring"
+[[ ! $(command -v gnome-keyring) ]] && $install_command gnome-keyring || echo "gnome-keyring"
 ######## terminal tools #########
 #file Manager
 [[ ! $(command -v ranger) ]] && $install_command ranger || echo "ranger exist!"
