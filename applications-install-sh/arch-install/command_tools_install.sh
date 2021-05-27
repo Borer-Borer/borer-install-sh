@@ -26,3 +26,6 @@
 # install trans
 wget -O $HOME/bin/trans git.io/trans
 sudo chmod +x $HOME/bin/trans
+
+[[ ! $(command -v git) ]] && $install_command git || echo "git exist!"
+[[ ! $(command -v git-lfs) ]] && $install_command git-lfs || echo "git-lfs exist!"
