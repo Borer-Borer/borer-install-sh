@@ -13,5 +13,8 @@ cargo install xsv
 # A command-line hex viewer
 cargo install hexyl
 
+
 # Easily and securely share files from the command line.  A fully featured Firefox Send client.
 cargo install ffsend
+
+cargo install dust
