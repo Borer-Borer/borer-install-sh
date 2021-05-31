@@ -11,3 +11,5 @@
 [[ ! $(command -v syncthing) ]] && $install_command syncthing || echo "syncthing exist!"
 #trash
 [[ ! $(command -v trash) ]] && $install_command trash || echo "trash exist!"
+#file manager
+[[ ! $(command -v nautilus) ]] && $install_command nautilus || echo "nautilus exist!"
