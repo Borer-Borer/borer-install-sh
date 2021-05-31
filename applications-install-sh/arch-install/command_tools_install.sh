@@ -32,3 +32,4 @@ sudo chmod +x $HOME/bin/trans
 
 #sway set volume
 [[ ! $(command -v pamixer) ]] && $install_command pamixer || echo "pamixer exist!"
+[[ ! $(command -v screenfetch) ]] && $install_command screenfetch || echo "screenfetch exist!"
