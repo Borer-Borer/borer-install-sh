@@ -29,3 +29,6 @@ sudo chmod +x $HOME/bin/trans
 
 [[ ! $(command -v git) ]] && $install_command git || echo "git exist!"
 [[ ! $(command -v git-lfs) ]] && $install_command git-lfs || echo "git-lfs exist!"
+
+#sway set volume
+[[ ! $(command -v pamixer) ]] && $install_command pamixer || echo "pamixer exist!"
