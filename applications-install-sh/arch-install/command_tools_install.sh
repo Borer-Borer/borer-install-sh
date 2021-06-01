@@ -39,3 +39,7 @@ sudo chmod +x $HOME/bin/trans
 
 # the music player in command
 [[ ! $(command -v cmus) ]] && $install_command cmus || echo "cmus exist!"
+
+# A nice command browser
+[[ ! $(command -v links) ]] && $install_command links || echo "links exist!"
+
