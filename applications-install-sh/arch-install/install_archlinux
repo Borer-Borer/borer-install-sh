@@ -99,9 +99,10 @@ umount -R /mnt
 reboot
 #when you come into your archlinux
 #avoid losing your network connection,you should
-#edit /etc/iwd/main.conf
+#edit /etc/iwd/main.conf ,add the following code:
 #[General]
 #EnableNetworkConfiguration=true
+#
 #or install dhcpcd
 #pacman -S dhcpcd
 #systemctl start dhcpcd
