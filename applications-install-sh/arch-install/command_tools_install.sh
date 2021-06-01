@@ -32,4 +32,10 @@ sudo chmod +x $HOME/bin/trans
 
 #sway set volume
 [[ ! $(command -v pamixer) ]] && $install_command pamixer || echo "pamixer exist!"
-[[ ! $(command -v screenfetch) ]] && $install_command screenfetch || echo "screenfetch exist!"
+
+# screen fetch
+# [[ ! $(command -v screenfetch) ]] && $install_command screenfetch || echo "screenfetch exist!"
+[[ ! $(command -v neofetch) ]] && $install_command neofetch || echo "neofetch exist!"
+
+# the music player in command
+[[ ! $(command -v cmus) ]] && $install_command cmus || echo "cmus exist!"
