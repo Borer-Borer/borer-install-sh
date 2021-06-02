@@ -1,6 +1,7 @@
 #/bin/bash
 #GNOME Keyring is a collection of components in GNOME that store secrets, passwords, keys, certificates and make them available to applications.
-[[ ! $(command -v gnome-keyring) ]] && $install_command gnome-keyring || echo "gnome-keyring"
+# it is in gnome ,not in sway ,my arch(5.12.8-arch1-1) sway is bad run it
+# [[ ! $(command -v gnome-keyring) ]] && $install_command gnome-keyring || echo "gnome-keyring"
 ######## terminal tools #########
 #file Manager
 [[ ! $(command -v ranger) ]] && $install_command ranger || echo "ranger exist!"
@@ -42,4 +43,8 @@ sudo chmod +x $HOME/bin/trans
 
 # A nice command browser
 [[ ! $(command -v links) ]] && $install_command links || echo "links exist!"
+[[ ! $(command -v elinks) ]] && $install_command elinks || echo "elinks exist!"
+
+# display files tree :ranger
+[[ ! $(command -v ranger) ]] && $install_command ranger || echo "ranger exist!"
 
