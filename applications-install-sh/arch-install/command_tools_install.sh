@@ -48,3 +48,6 @@ sudo chmod +x $HOME/bin/trans
 # display files tree :ranger
 [[ ! $(command -v ranger) ]] && $install_command ranger || echo "ranger exist!"
 
+# a like vim operate browser : qutebrowser
+[[ ! $(command -v qutebrowser) ]] && $install_command qutebrowser || echo "qutebrowser exist!"
+

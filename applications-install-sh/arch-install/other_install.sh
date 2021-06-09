@@ -11,3 +11,7 @@ if [ ! $(command -v unclutter) ]; then
         "$add_profile" >> $HOME/.profile
     fi
 fi
+
+# the game in linux
+[[ ! $(command -v openarena) ]] && yay openarena || echo "opennarena exist!"
+
