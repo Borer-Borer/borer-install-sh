@@ -17,4 +17,4 @@ cargo install hexyl
 # Easily and securely share files from the command line.  A fully featured Firefox Send client.
 cargo install ffsend
 
-cargo install dust
+cargo install du-dust
