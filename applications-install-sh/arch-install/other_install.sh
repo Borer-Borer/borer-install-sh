@@ -15,3 +15,4 @@ fi
 # the game in linux
 [[ ! $(command -v openarena) ]] && yay openarena || echo "opennarena exist!"
 
+docker run --rm -it wernight/funbox cmatrix
