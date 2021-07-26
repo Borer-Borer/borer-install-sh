@@ -16,3 +16,9 @@ fi
 [[ ! $(command -v openarena) ]] && yay openarena || echo "opennarena exist!"
 
 docker run --rm -it wernight/funbox cmatrix
+# debtap 用于安装deb包
+# sudo debtap -u
+# debtap xxx.deb
+# sudo pacman -U xxx.pkg
+# OR
+# sudo pacman -U xxxx.xz
