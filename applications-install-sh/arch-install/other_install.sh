@@ -3,6 +3,8 @@
 
 [[ ! $(command -v audacity) ]] && $install_command audacity || echo "audacity exist!"
 
+[[ ! $(command -v xclip) ]] && $install_command xclip || echo "xclip exist!"
+
 if [ ! $(command -v unclutter) ]; then
     add_profile="nohup unclutter -idle 10 &"
     $install_command unclutter
