@@ -5,6 +5,10 @@
 
 [[ ! $(command -v xclip) ]] && $install_command xclip || echo "xclip exist!"
 
+[[ ! $(command -v fcitx5) ]] && $install_command fcitx5 fcitx5-qt
+fcitx5-configtool fcitx5-chinese-addons || echo "fcitx5 exist!"
+
+
 if [ ! $(command -v unclutter) ]; then
     add_profile="nohup unclutter -idle 10 &"
     $install_command unclutter
