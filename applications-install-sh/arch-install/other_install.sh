@@ -6,7 +6,7 @@
 [[ ! $(command -v xclip) ]] && $install_command xclip || echo "xclip exist!"
 
 ### 文件管理
-[[ ! $(command -v nautilus) ]] && $install_command nautulus ||
+[[ ! $(command -v nautilus) ]] && $install_command nautilus ||
     echo "nautilus exist!"
 
 [[ ! $(command -v fcitx5) ]] && $install_command fcitx5 fcitx5-qt
