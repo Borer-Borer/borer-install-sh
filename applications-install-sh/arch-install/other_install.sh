@@ -25,6 +25,9 @@ fi
 # the game in linux
 [[ ! $(command -v openarena) ]] && yay openarena || echo "opennarena exist!"
 
+# pdf edit note app
+[[ ! $(command -v xournal) ]] && yay xournal || echo "xournal exist!"
+
 docker run --rm -it wernight/funbox cmatrix
 # debtap 用于安装deb包
 # sudo debtap -u
