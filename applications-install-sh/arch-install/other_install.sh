@@ -35,3 +35,7 @@ docker run --rm -it wernight/funbox cmatrix
 # sudo pacman -U xxx.pkg
 # OR
 # sudo pacman -U xxxx.xz
+# excalidraw 画图工具
+#git clone https://github.com/excalidraw/excalidraw.git
+#yarn--install,yarn start--run
+
