@@ -43,3 +43,6 @@ yay install snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install wps-office-multilang
+sudo ln -s /snap/bin/wps-office-multilang.wps  /bin/wps-office-multilang.wps
+sudo ln -s /snap/bin/wps-office-multilang.wpp  /bin/wps-office-multilang.wpp
+sudo ln -s /snap/bin/wps-office-multilang.et  /bin/wps-office-multilang.et
