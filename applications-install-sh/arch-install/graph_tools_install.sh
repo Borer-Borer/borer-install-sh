@@ -13,3 +13,5 @@
 [[ ! $(command -v trash) ]] && $install_command trash || echo "trash exist!"
 #file manager
 [[ ! $(command -v nautilus) ]] && $install_command nautilus || echo "nautilus exist!"
+# picture
+[[ ! $(command -v nomacs) ]] && $install_command nomacs || echo "nomacs exist!"
