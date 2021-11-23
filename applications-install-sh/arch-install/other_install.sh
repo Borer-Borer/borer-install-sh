@@ -39,3 +39,7 @@ docker run --rm -it wernight/funbox cmatrix
 #git clone https://github.com/excalidraw/excalidraw.git
 #yarn--install,yarn start--run
 
+yay install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install wps-office-multilang
