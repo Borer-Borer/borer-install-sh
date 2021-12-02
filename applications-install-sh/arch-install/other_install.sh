@@ -28,6 +28,12 @@ fi
 # pdf edit note app
 [[ ! $(command -v xournal) ]] && yay xournal || echo "xournal exist!"
 
+# 便条 xpad
+[[ ! $(command -v xpad) ]] && $install_command xpad || echo "xpad exist!"
+
+# 阅读器calibre
+[[ ! $(command -v calibre) ]] && $install_command calibre || echo "calibre exist!"
+
 docker run --rm -it wernight/funbox cmatrix
 # debtap 用于安装deb包
 # sudo debtap -u
