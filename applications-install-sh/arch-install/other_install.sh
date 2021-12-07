@@ -34,6 +34,10 @@ fi
 # 阅读器calibre
 [[ ! $(command -v calibre) ]] && $install_command calibre || echo "calibre exist!"
 
+# 连接手机文件MTP
+[[ ! $(command -v mtpfs) ]] && $install_command mtpfs || echo "mtpfs exist!"
+[[ ! $(command -v gvfs-mtp) ]] && $install_command gvfs-mtp || echo "gvfs-mtp exist!"
+
 docker run --rm -it wernight/funbox cmatrix
 # debtap 用于安装deb包
 # sudo debtap -u
