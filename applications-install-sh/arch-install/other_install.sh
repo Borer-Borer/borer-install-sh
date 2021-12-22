@@ -38,6 +38,13 @@ fi
 [[ ! $(command -v mtpfs) ]] && $install_command mtpfs || echo "mtpfs exist!"
 [[ ! $(command -v gvfs-mtp) ]] && $install_command gvfs-mtp || echo "gvfs-mtp exist!"
 
+# FTP
+[[ ! $(command -v inetutils ) ]] && $install_command inetutils  || echo " inetutils exist!"
+
+#微信
+wechat-uos
+
+
 docker run --rm -it wernight/funbox cmatrix
 # debtap 用于安装deb包
 # sudo debtap -u
