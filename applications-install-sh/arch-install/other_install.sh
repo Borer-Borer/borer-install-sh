@@ -43,6 +43,20 @@ fi
 
 #微信
 wechat-uos
+#远程控制应用
+rustdesk-bin
+#截图命令
+grim
+#另一种网络链接方式
+安装networkmanager
+systemctl start networkmanager
+systemctl enable networkmanager
+nmcli device wifi connect my_wifi password *****
+nmcli con up my_wifi
+#录屏工具
+kazam obs-studio
+# 内网穿透
+ngrok
 
 
 docker run --rm -it wernight/funbox cmatrix
