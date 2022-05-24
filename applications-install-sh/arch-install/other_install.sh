@@ -57,6 +57,10 @@ nmcli con up my_wifi
 kazam obs-studio
 # 内网穿透
 ngrok
+# markdown editor
+typora
+# 颜色选择器
+gpick
 
 
 docker run --rm -it wernight/funbox cmatrix
