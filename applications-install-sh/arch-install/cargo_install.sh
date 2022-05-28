@@ -18,3 +18,5 @@ cargo install hexyl
 cargo install ffsend
 
 cargo install du-dust
+
+cargo install spotify-tui
