@@ -51,3 +51,5 @@ sudo chmod +x $HOME/bin/trans
 # a like vim operate browser : qutebrowser
 [[ ! $(command -v qutebrowser) ]] && $install_command qutebrowser || echo "qutebrowser exist!"
 
+[[ ! $(command -v ncdu) ]] && $install_command ncdu|| echo "ncdu exist!"
+
