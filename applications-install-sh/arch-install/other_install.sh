@@ -73,6 +73,7 @@ docker run --rm -it wernight/funbox cmatrix
 # excalidraw 画图工具
 #git clone https://github.com/excalidraw/excalidraw.git
 #yarn--install,yarn start--run
+amule
 
 yay install snapd
 sudo systemctl enable --now snapd.socket
