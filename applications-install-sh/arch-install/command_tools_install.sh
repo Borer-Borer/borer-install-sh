@@ -18,6 +18,7 @@
 
 
 [[ ! $(command -v lftp) ]] && $install_command lftp || echo "lftp exist!"
+[[ ! $(command -v lf) ]] && $install_command lf || echo "lf exist!"
 [[ ! $(command -v mutt) ]] && $install_command mutt || echo "mutt exist!"
 [[ ! $(command -v wget) ]] && $install_command wget || echo "wget exist!"
 # Sony 的 PlayStation2, SEGA 的 DreamCast, Nintendo 的 N64，Namco 的街机
