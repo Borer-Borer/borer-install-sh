@@ -61,6 +61,13 @@ ngrok
 typora
 # 颜色选择器
 gpick
+# 内网穿透
+bore
+ranger
+lf
+# ebook mobi reader
+fbreader
+bookworm
 
 
 docker run --rm -it wernight/funbox cmatrix
