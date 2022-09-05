@@ -54,3 +54,6 @@ sudo chmod +x $HOME/bin/trans
 
 [[ ! $(command -v ncdu) ]] && $install_command ncdu|| echo "ncdu exist!"
 
+# resilio sync and then visit "localhost:8888/gui"
+[[ ! $(command -v rslsync) ]] && $install_command rslsync|| echo "rslsync exist!"
+
