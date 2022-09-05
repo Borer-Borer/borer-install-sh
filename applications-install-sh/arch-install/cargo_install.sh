@@ -7,7 +7,7 @@ navi repo add denisidoro/cheats
 # A command-line benchmarking tool.
 cargo install typerfine
 
-# A fast CSV command line toolkit written in Rust. 
+# A fast CSV command line toolkit written in Rust.
 cargo install xsv
 
 # A command-line hex viewer
@@ -20,3 +20,15 @@ cargo install ffsend
 cargo install du-dust
 
 cargo install spotify-tui
+
+cargo install broot
+
+cargo install gitui
+
+cargo install tui-rs
+
+cargo install anki
+
+cargo install rustlings
+
+cargo install rome
