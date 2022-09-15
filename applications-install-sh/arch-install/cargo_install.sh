@@ -32,3 +32,5 @@ cargo install anki
 cargo install rustlings
 
 cargo install rome
+
+cargo install mdbook

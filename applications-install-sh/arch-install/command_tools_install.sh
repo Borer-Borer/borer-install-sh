@@ -57,3 +57,6 @@ sudo chmod +x $HOME/bin/trans
 # resilio sync and then visit "localhost:8888/gui"
 [[ ! $(command -v rslsync) ]] && $install_command rslsync|| echo "rslsync exist!"
 
+
+
+#paru -S ranger ucollage cowsay htop ncdu onefetch mpv vlc trash nomacs nautilus evince audacity xclip xournal xpad calibre mtpfs gvfs-mtp inetutils grim kazam bore lf fbreader cmatrix cal screenfetch asciiview bastet ninvaders nsnake greed pi helix
