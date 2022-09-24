@@ -58,10 +58,8 @@ cargo install gpg-tui
 
 #A TUI system monitor written in Rust
 cargo install ytop
-
 #sort of like top or htop but with zoom-able charts CPU.GPU,network,and disk usage
 cargo install zenith
-
 #Yet another cross-platform graphical process/system monitor.(btm)
 cargo install bottom
 
