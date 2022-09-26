@@ -21,7 +21,6 @@ cargo install du-dust
 
 cargo install spotify-tui
 
-cargo install broot
 
 cargo install gitui
 
@@ -107,6 +106,7 @@ cargo install xplr
 cargo install joshuto
 #Terminal disk space navigator
 cargo install diskonaut
+cargo install broot
 
 #$Rust ADS-B decoder +tui radar application:adsb_deku
 
@@ -124,4 +124,16 @@ cargo install ytui-music
 cargo install picterm
 
 #A cross-platform tui database management tool written in rust
-cargo instal gobang
+cargo install gobang
+
+#tokei is a program that display statistics about your code.
+cargo install tokei
+
+# fd instend of find
+cargo install fd
+
+#procs instend of ps
+cargo install procs
+
+#onefetch
+cargo install onefetch
