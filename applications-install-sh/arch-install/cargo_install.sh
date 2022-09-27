@@ -114,13 +114,13 @@ cargo install broot
 #cli command organizer written in rust
 cargo install hoard-rs
 
-#A modern alternative to jthe watch command
+#A modern alternative to the watch command
 cargo install hwatch
 
 #Youtube client in terminal for music
 cargo install ytui-music
 
-#Tui image viewer 
+#Tui image viewer
 cargo install picterm
 
 #A cross-platform tui database management tool written in rust
@@ -137,3 +137,9 @@ cargo install procs
 
 #onefetch
 cargo install onefetch
+
+#dust
+cargo install dust
+
+#USAGE
+#bottom(btm),kmon,bandwhich,gitui,joshuto,mkbook,battleship-rs,minesweep,termscp,pros,onefetch,bat,fd,repg,dust,goband,ytui-music,broot(br),oxker,trippy,gping,kdash,termchat,
