@@ -68,6 +68,8 @@ lf
 # ebook mobi reader
 fbreader
 bookworm
+# blackarch theme and wallpaper(/usr/share/blackarch/artwork)
+pacman -S blackarch-artwork
 
 
 docker run --rm -it wernight/funbox cmatrix
